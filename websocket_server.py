@@ -256,7 +256,7 @@ class FingerprintWebSocketServer:
                 await asyncio.sleep(2)
                 continue
 
-    async def start_server(self, host="0.0.0.0", port=8765):
+    async def start_server(self, host="192.168.0.127", port=8765):
         if not self.initialize_device():
             print("Failed to initialize fingerprint device")
             return
