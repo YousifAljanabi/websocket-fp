@@ -182,7 +182,7 @@ class FingerprintWebSocketServer:
         for client in disconnected:
             self.connected_clients.discard(client)
 
-    async def handle_client(self, websocket, path):
+    async def handle_client(self, websocket):
         await self.register_client(websocket)
         try:
             await websocket.wait_closed()
